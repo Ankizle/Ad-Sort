@@ -7,13 +7,15 @@ using namespace std;
 
 int main() {
   
-  //refrence vars
+  //refrence vars:
+  //---------------------
   const int min_data_size = 70
     , max_data_size = 10000;
   
   const int min_int = 100
     , max_int = 10000
     , max_variance = 9;
+  //---------------------
   
   //init a dataset
   vector<map<string, int> > dataset;
@@ -39,7 +41,7 @@ int main() {
     dataset.push_back(curMap);
   }
   
-  //TODO: perform the sort
+  //TODO: perform the sort (the real part)
   
   return 0;
 }
