@@ -31,23 +31,15 @@ vector<map<string, double>> sort(vector<map<string, double>> data) {
     if (sum <= firstval) first.push_back(it);
     else second.push_back(it);
 
-    delete &sum; //free memory address of sum
   }
-
-  delete &data;
 
   vector<map<string, double>> merged = sort(first)
   , sortedSecond = sort(second);
 
   merged.push_back(firstdata);
 
-  //free memory address of firstdata
-  delete &firstdata;
-
   //merge the two vectors
   merged.insert(merged.end(), sortedSecond.begin(), sortedSecond.end());
-
-  delete &sortedSecond;
 
   return merged;
 }
